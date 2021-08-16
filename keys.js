@@ -7,7 +7,7 @@
 
 exportObjects = {
     keys (obj) {
-        keysList = [];
+        const keysList = [];
         for(property in obj) {
             keysList.push(property);
         }
