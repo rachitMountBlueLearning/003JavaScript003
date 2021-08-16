@@ -9,7 +9,7 @@ exportObjects = {
     values (obj) {
         const valuesList = [];
         for(property in obj) {
-            if(!(property instanceof Function)) {
+            if(!(obj[property] instanceof Function)) {
                 valuesList.push(obj[property]);
             }
         }

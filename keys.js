@@ -9,7 +9,9 @@ exportObjects = {
     keys (obj) {
         const keysList = [];
         for(property in obj) {
-            keysList.push(property);
+            if(!(obj[property] instanceof Function)) {
+                keysList.push(property);
+            }
         }
         return keysList;
     }

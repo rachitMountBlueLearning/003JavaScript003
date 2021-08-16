@@ -8,7 +8,7 @@ exportObjects = {
     pairs (obj) {
         const pairsList = [];
         for(property in obj) {
-            if(!(property instanceof Function)) {
+            if(!(obj[property] instanceof Function)) {
                 pairsList.push([property, obj[property]]);
             }
         }
